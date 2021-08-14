@@ -1,0 +1,219 @@
+<?xml version="1.0" ?>
+<robot name="zordon" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find zordon_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find zordon_description)/urdf/zordon.trans" />
+<xacro:include filename="$(find zordon_description)/urdf/zordon.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.409717560388444e-10 1.8026274130973073e-14 0.07286357114934632"/>
+    <mass value="1.602010241321851"/>
+    <inertia ixx="0.02718" ixy="-0.0" ixz="-0.0" iyy="0.009876" iyz="-0.0" izz="0.036783"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0025000000000013484 -8.921362123656963e-16 0.012500021883900217"/>
+    <mass value="0.25977044254371906"/>
+    <inertia ixx="9.4e-05" ixy="-0.0" ixz="0.0" iyy="9.4e-05" iyz="-0.0" izz="0.000161"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.1125 0.0 -0.070998"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.1125 0.0 -0.070998"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_carrier_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.3877787807814457e-17 -8.875322352053239e-16 -0.029347633513040934"/>
+    <mass value="0.21807530166619712"/>
+    <inertia ixx="0.000123" ixy="0.0" ixz="-0.0" iyy="0.000123" iyz="0.0" izz="0.000115"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.1125 0.0 -0.066998"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/back_carrier_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.1125 0.0 -0.066998"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/back_carrier_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_carrier_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.3877787807814457e-17 -8.876926971268518e-16 -0.029347633513040934"/>
+    <mass value="0.21807530166619712"/>
+    <inertia ixx="0.000123" ixy="0.0" ixz="0.0" iyy="0.000123" iyz="0.0" izz="0.000115"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.1125 0.0 -0.066998"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/front_carrier_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.1125 0.0 -0.066998"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/front_carrier_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_axis_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.00277618890956e-05 0.05779998066759262 -0.005542791675991504"/>
+    <mass value="0.3660031294225276"/>
+    <inertia ixx="0.000359" ixy="-0.0" ixz="-0.0" iyy="0.00051" iyz="-1e-06" izz="0.000359"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.1778 -0.091498"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/left_axis_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.1778 -0.091498"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/left_axis_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_axis_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-3.002653254362116e-05 -0.05779998066759304 -0.005542791675991587"/>
+    <mass value="0.3660031294225294"/>
+    <inertia ixx="0.000359" ixy="-0.0" ixz="0.0" iyy="0.00051" iyz="1e-06" izz="0.000359"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 0.1778 -0.091498"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/right_axis_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 0.1778 -0.091498"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/right_axis_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-4.918904628965906e-08 -0.004653107435936971 8.263098827399062e-08"/>
+    <mass value="0.698638295383221"/>
+    <inertia ixx="0.001729" ixy="-0.0" ixz="-0.0" iyy="0.003143" iyz="-0.0" izz="0.001729"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 0.2312 -0.085998"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 0.2312 -0.085998"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.00015304997522055152 0.00635310720846094 -0.00012691724380678449"/>
+    <mass value="0.6986383188770442"/>
+    <inertia ixx="0.001729" ixy="-0.0" ixz="0.0" iyy="0.003143" iyz="0.0" izz="0.001729"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.000153 -0.2295 -0.086125"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.000153 -0.2295 -0.086125"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="lidar_base" type="fixed">
+  <origin rpy="0 0 0" xyz="0.1125 0.0 0.070998"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+<joint name="back_c_base" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.1125 0.0 0.066998"/>
+  <parent link="base_link"/>
+  <child link="back_carrier_1"/>
+</joint>
+
+<joint name="front_c_base" type="fixed">
+  <origin rpy="0 0 0" xyz="0.1125 0.0 0.066998"/>
+  <parent link="base_link"/>
+  <child link="front_carrier_1"/>
+</joint>
+
+<joint name="left_axis_base" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.1778 0.091498"/>
+  <parent link="base_link"/>
+  <child link="left_axis_1"/>
+</joint>
+
+<joint name="right_axis_base" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.1778 0.091498"/>
+  <parent link="base_link"/>
+  <child link="right_axis_1"/>
+</joint>
+
+<joint name="right_motor" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 -0.0534 -0.0055"/>
+  <parent link="right_axis_1"/>
+  <child link="right_wheel_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="left_motor" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.000153 0.0517 -0.005373"/>
+  <parent link="left_axis_1"/>
+  <child link="left_wheel_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+</robot>
