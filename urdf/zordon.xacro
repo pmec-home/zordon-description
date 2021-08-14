@@ -3,7 +3,9 @@
 
 <xacro:include filename="$(find zordon_description)/urdf/materials.xacro" />
 <xacro:include filename="$(find zordon_description)/urdf/zordon.trans" />
-<xacro:include filename="$(find zordon_description)/urdf/zordon.gazebo" />
+<xacro:include filename="$(find zordon_description)/gazebo/zordon_materials.gazebo" />
+<xacro:include filename="$(find zordon_description)/gazebo/zordon_physics.gazebo" />
+<xacro:include filename="$(find zordon_description)/gazebo/zordon_plugins.gazebo" />
 <link name="base_link">
   <inertial>
     <origin rpy="0 0 0" xyz="1.409717560388444e-10 1.8026274130973073e-14 0.07286357114934632"/>

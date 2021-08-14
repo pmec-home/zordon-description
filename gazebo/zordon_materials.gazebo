@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<robot name="zordon" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="primary_color" value="Gazebo/Yellow" />
+<xacro:property name="secondary_color" value="Gazebo/DarkGrey" />
+<xacro:property name="metal_color" value="Gazebo/Silver" />
+
+<gazebo reference="base_link">
+  <material>${primary_color}</material>
+</gazebo>
+
+<gazebo reference="lidar_1">
+  <material>${secondary_color}</material>
+</gazebo>
+
+<gazebo reference="back_carrier_1">
+  <material>${secondary_color}</material>
+</gazebo>
+
+<gazebo reference="front_carrier_1">
+  <material>${secondary_color}</material>
+</gazebo>
+
+<gazebo reference="left_axis_1">
+  <material>${metal_color}</material>
+</gazebo>
+
+<gazebo reference="right_axis_1">
+  <material>${metal_color}</material>
+</gazebo>
+
+<gazebo reference="right_wheel_1">
+  <material>${secondary_color}</material>
+</gazebo>
+
+<gazebo reference="left_wheel_1">
+  <material>${secondary_color}</material>
+</gazebo>
+
+</robot>
