@@ -9,7 +9,7 @@
   <material>${primary_color}</material>
 </gazebo>
 
-<gazebo reference="lidar_1">
+<gazebo reference="lid_1">
   <material>${secondary_color}</material>
 </gazebo>
 
@@ -43,6 +43,10 @@
 
 <gazebo reference="camera_1">
   <material>${secondary_color}</material>
+</gazebo>
+
+<gazebo reference="lidar_1">
+  <material>${metal_color}</material>
 </gazebo>
 
 </robot>

@@ -27,23 +27,23 @@
   </collision>
 </link>
 
-<link name="lidar_1">
+<link name="lid_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.0025000000000013484 -8.921362123656963e-16 0.012500021883900217"/>
-    <mass value="0.25977044254371906"/>
-    <inertia ixx="9.4e-05" ixy="-0.0" ixz="0.0" iyy="9.4e-05" iyz="-0.0" izz="0.000161"/>
+    <origin rpy="0 0 0" xyz="0.0025000000000014178 0.000310679654079196 0.012385674574144717"/>
+    <mass value="0.24572163839417602"/>
+    <inertia ixx="8.6e-05" ixy="0.0" ixz="0.0" iyy="8.6e-05" iyz="-0.0" izz="0.000146"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="-0.1125 0.0 -0.070998"/>
     <geometry>
-      <mesh filename="package://zordon_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://zordon_description/meshes/lid_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.1125 0.0 -0.070998"/>
     <geometry>
-      <mesh filename="package://zordon_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://zordon_description/meshes/lid_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -216,10 +216,31 @@
   </collision>
 </link>
 
-<joint name="lidar_base" type="fixed">
+<link name="lidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-4.163336342344337e-17 -0.0068683550355117425 0.0025000218839001526"/>
+    <mass value="0.01111484674592335"/>
+    <inertia ixx="5e-06" ixy="-0.0" ixz="-0.0" iyy="6e-06" iyz="0.0" izz="1.1e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.115 0.0 -0.082998"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.115 0.0 -0.082998"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="lid_base" type="fixed">
   <origin rpy="0 0 0" xyz="0.1125 0.0 0.070998"/>
   <parent link="base_link"/>
-  <child link="lidar_1"/>
+  <child link="lid_1"/>
 </joint>
 
 <joint name="back_c_base" type="fixed">
@@ -270,6 +291,12 @@
   <origin rpy="0 0 0" xyz="0.025 0.0 0.4"/>
   <parent link="pole_1"/>
   <child link="camera_1"/>
+</joint>
+
+<joint name="lidar_lid" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0025 0.0 0.012"/>
+  <parent link="lid_1"/>
+  <child link="lidar_1"/>
 </joint>
 
 </robot>
