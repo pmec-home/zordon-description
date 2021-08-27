@@ -50,9 +50,9 @@
 
 <link name="back_carrier_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-1.3877787807814457e-17 -8.875322352053239e-16 -0.029347633513040934"/>
-    <mass value="0.21807530166619712"/>
-    <inertia ixx="0.000123" ixy="0.0" ixz="-0.0" iyy="0.000123" iyz="0.0" izz="0.000115"/>
+    <origin rpy="0 0 0" xyz="0.0 -8.83186752898002e-16 -0.027559550129605773"/>
+    <mass value="0.14894863447518575"/>
+    <inertia ixx="6.8e-05" ixy="-0.0" ixz="-0.0" iyy="6.8e-05" iyz="-0.0" izz="5.7e-05"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="0.1125 0.0 -0.066998"/>
@@ -71,9 +71,9 @@
 
 <link name="front_carrier_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="1.3877787807814457e-17 -8.876926971268518e-16 -0.029347633513040934"/>
-    <mass value="0.21807530166619712"/>
-    <inertia ixx="0.000123" ixy="0.0" ixz="0.0" iyy="0.000123" iyz="0.0" izz="0.000115"/>
+    <origin rpy="0 0 0" xyz="-1.3877787807814457e-17 -8.833385412021499e-16 -0.027559550129605773"/>
+    <mass value="0.14894863447518575"/>
+    <inertia ixx="6.8e-05" ixy="0.0" ixz="0.0" iyy="6.8e-05" iyz="-0.0" izz="5.7e-05"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="-0.1125 0.0 -0.066998"/>
@@ -92,7 +92,7 @@
 
 <link name="left_axis_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="3.00277618890956e-05 0.05779998066759262 -0.005542791675991504"/>
+    <origin rpy="0 0 0" xyz="3.0027761889070448e-05 0.057799980667592676 -0.00554279167599149"/>
     <mass value="0.3660031294225276"/>
     <inertia ixx="0.000359" ixy="-0.0" ixz="-0.0" iyy="0.00051" iyz="-1e-06" izz="0.000359"/>
   </inertial>
@@ -134,8 +134,8 @@
 
 <link name="right_wheel_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-4.918904628965906e-08 -0.004653107435936971 8.263098827399062e-08"/>
-    <mass value="0.698638295383221"/>
+    <origin rpy="0 0 0" xyz="-4.918904630345829e-08 -0.004653107435936887 8.263098824623505e-08"/>
+    <mass value="0.6986382953832205"/>
     <inertia ixx="0.001729" ixy="-0.0" ixz="-0.0" iyy="0.003143" iyz="-0.0" izz="0.001729"/>
   </inertial>
   <visual>
@@ -155,7 +155,7 @@
 
 <link name="left_wheel_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.00015304997522055152 0.00635310720846094 -0.00012691724380678449"/>
+    <origin rpy="0 0 0" xyz="0.00015304997522057911 0.00635310720846094 -0.00012691724380678449"/>
     <mass value="0.6986383188770442"/>
     <inertia ixx="0.001729" ixy="-0.0" ixz="0.0" iyy="0.003143" iyz="0.0" izz="0.001729"/>
   </inertial>
@@ -170,6 +170,48 @@
     <origin rpy="0 0 0" xyz="0.000153 -0.2295 -0.086125"/>
     <geometry>
       <mesh filename="package://zordon_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pole_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.2000000218839002"/>
+    <mass value="2.6999999999999997"/>
+    <inertia ixx="0.036562" ixy="0.0" ixz="0.0" iyy="0.036562" iyz="0.0" izz="0.001125"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 0.0 -0.070998"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/pole_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 0.0 -0.070998"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/pole_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.014360695145417358 -1.5777218104420236e-32 -0.049999978116100074"/>
+    <mass value="0.8073690139840798"/>
+    <inertia ixx="0.001026" ixy="-0.0" ixz="-0.0" iyy="0.000113" iyz="-0.0" izz="0.001025"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.025 -0.0 -0.470998"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.025 -0.0 -0.470998"/>
+    <geometry>
+      <mesh filename="package://zordon_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -215,7 +257,19 @@
   <origin rpy="0 0 0" xyz="-0.000153 0.0517 -0.005373"/>
   <parent link="left_axis_1"/>
   <child link="left_wheel_1"/>
-  <axis xyz="0.0 1.0 0.0"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="pole_base" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.070998"/>
+  <parent link="base_link"/>
+  <child link="pole_1"/>
+</joint>
+
+<joint name="camera_pole" type="fixed">
+  <origin rpy="0 0 0" xyz="0.025 0.0 0.4"/>
+  <parent link="pole_1"/>
+  <child link="camera_1"/>
 </joint>
 
 </robot>

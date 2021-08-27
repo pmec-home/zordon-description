@@ -37,4 +37,12 @@
   <material>${secondary_color}</material>
 </gazebo>
 
+<gazebo reference="pole_1">
+  <material>${primary_color}</material>
+</gazebo>
+
+<gazebo reference="camera_1">
+  <material>${secondary_color}</material>
+</gazebo>
+
 </robot>
