@@ -18,16 +18,16 @@
     <rightJoint>right_motor</rightJoint>
 
     <!-- The distance from the center of one wheel to the other, in meters, defaults to 0.34 m -->
-    <!--<wheelSeparation>0.5380</wheelSeparation>-->
+    <wheelSeparation>0.4682</wheelSeparation>
 
     <!-- Diameter of the wheels, in meters, defaults to 0.15 m -->
-    <!--<wheelDiameter>0.2410</wheelDiameter>-->
+    <wheelDiameter>0.1712</wheelDiameter>
 
     <!-- Wheel acceleration, in rad/s^2, defaults to 0.0 rad/s^2 -->
     <wheelAcceleration>1.0</wheelAcceleration>
 
     <!-- Maximum torque which the wheels can produce, in Nm, defaults to 5 Nm -->
-    <wheelTorque>20</wheelTorque>
+    <wheelTorque>40</wheelTorque>
 
     <!-- Topic to receive geometry_msgs/Twist message commands, defaults to `cmd_vel` -->
     <commandTopic>cmd_vel</commandTopic>
@@ -61,7 +61,7 @@
 <gazebo reference="lidar_1">
   <sensor type="ray" name="rplidar_a1">
     <pose>0 0 0 0 0 0</pose>
-    <visualize>true</visualize>
+    <visualize>false</visualize>
     <update_rate>10</update_rate>
     <ray>
       <scan>

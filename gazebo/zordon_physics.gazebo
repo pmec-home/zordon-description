@@ -12,49 +12,49 @@
   <gravity>true</gravity>
 </gazebo>
 
+<gazebo reference="pole_1">
+  <mu1>${default_friction}</mu1>
+  <mu2>${default_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="carrier_front_1">
+  <mu1>${caster_friction}</mu1>
+  <mu2>${caster_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="carrier_back_1">
+  <mu1>${caster_friction}</mu1>
+  <mu2>${caster_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="lidar_1">
+  <mu1>${default_friction}</mu1>
+  <mu2>${default_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
 <gazebo reference="lid_1">
   <mu1>${default_friction}</mu1>
   <mu2>${default_friction}</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
-<gazebo reference="back_carrier_1">
-  <mu1>${caster_friction}</mu1>
-  <mu2>${caster_friction}</mu2>
-  <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="front_carrier_1">
-  <mu1>${caster_friction}</mu1>
-  <mu2>${caster_friction}</mu2>
-  <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="left_axis_1">
-  <mu1>${default_friction}</mu1>
-  <mu2>${default_friction}</mu2>
-  <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="right_axis_1">
-  <mu1>${default_friction}</mu1>
-  <mu2>${default_friction}</mu2>
-  <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="right_wheel_1">
+<gazebo reference="wheel_right_1">
   <mu1>${wheels_friction}</mu1>
   <mu2>${wheels_friction}</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
-<gazebo reference="left_wheel_1">
+<gazebo reference="wheel_left_1">
   <mu1>${wheels_friction}</mu1>
   <mu2>${wheels_friction}</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
-<gazebo reference="pole_1">
+<gazebo reference="tablet_1">
   <mu1>${default_friction}</mu1>
   <mu2>${default_friction}</mu2>
   <selfCollide>true</selfCollide>
@@ -66,7 +66,7 @@
   <selfCollide>true</selfCollide>
 </gazebo>
 
-<gazebo reference="lidar_1">
+<gazebo reference="microphone_1">
   <mu1>${default_friction}</mu1>
   <mu2>${default_friction}</mu2>
   <selfCollide>true</selfCollide>

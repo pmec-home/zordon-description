@@ -9,44 +9,44 @@
   <material>${primary_color}</material>
 </gazebo>
 
+<gazebo reference="pole_1">
+  <material>${metal_color}</material>
+</gazebo>
+
+<gazebo reference="carrier_front_1">
+  <material>${secondary_color}</material>
+</gazebo>
+
+<gazebo reference="carrier_back_1">
+  <material>${secondary_color}</material>
+</gazebo>
+
+<gazebo reference="lidar_1">
+  <material>${secondary_color}</material>
+</gazebo>
+
 <gazebo reference="lid_1">
   <material>${secondary_color}</material>
 </gazebo>
 
-<gazebo reference="back_carrier_1">
+<gazebo reference="wheel_right_1">
   <material>${secondary_color}</material>
 </gazebo>
 
-<gazebo reference="front_carrier_1">
+<gazebo reference="wheel_left_1">
   <material>${secondary_color}</material>
 </gazebo>
 
-<gazebo reference="left_axis_1">
-  <material>${metal_color}</material>
-</gazebo>
-
-<gazebo reference="right_axis_1">
-  <material>${metal_color}</material>
-</gazebo>
-
-<gazebo reference="right_wheel_1">
+<gazebo reference="tablet_1">
   <material>${secondary_color}</material>
-</gazebo>
-
-<gazebo reference="left_wheel_1">
-  <material>${secondary_color}</material>
-</gazebo>
-
-<gazebo reference="pole_1">
-  <material>${primary_color}</material>
 </gazebo>
 
 <gazebo reference="camera_1">
   <material>${secondary_color}</material>
 </gazebo>
 
-<gazebo reference="lidar_1">
-  <material>${metal_color}</material>
+<gazebo reference="microphone_1">
+  <material>${secondary_color}</material>
 </gazebo>
 
 </robot>
